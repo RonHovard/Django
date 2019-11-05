@@ -9,20 +9,12 @@
             учебников, открыток по адекватным ценам. Наш интернет-магазин - это всегда огромный ассортимент, быстрая
             доставка и низкие цены.</p><br>
         <img src="{% static 'img/map.PNG' %}" alt="map">
-        <div class="contact">
-            <p><b>Адрес: </b>Кировская область, г. Киров, ул.Книжная, дом 77</p>
-            <p><b>Телефон: </b>+7(777) 777-77-77</p>
-            <p><b>EMAIL: </b>kirovbooks@mail.ru</p>
-        </div>
-        <div class="contact">
-            <p><b>Адрес: </b>Кировская область, г. Кирово-Чепецк, ул.Цветочная, дом 55</p>
-            <p><b>Телефон: </b>+7(555) 555-55-55</p>
-            <p><b>EMAIL: </b>chepetskbooks@mail.ru</p>
-        </div>
-        <div class="contact">
-            <p><b>Адрес: </b>Кировская область, г. Слободской, ул.Энтузиастов, дом 33</p>
-            <p><b>Телефон: </b>+7(333) 333-33-33</p>
-            <p><b>EMAIL: </b>slobodabooks@mail.ru</p>
-        </div>
+        {% for contact in contacts %}
+            <div class="contact">
+                <p><b>Адрес: </b>{{ contact.address }}</p>
+                <p><b>Телефон: </b>{{ contact.phone }}</p>
+                <p><b>EMAIL: </b>{{ contact.email }}</p>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
