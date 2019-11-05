@@ -18,14 +18,14 @@
     <header>
         {% block header %}
             <nav>
-                <a href="/">Главная</a>
-                <a href="/catalog">Каталог</a>
-                <a href="/contacts">Контакты</a>
+                <a href="{% url 'index' %}">Главная</a>
+                <a href="{% url 'catalog' %}">Каталог</a>
+                <a href="{% url 'contacts' %}">Контакты</a>
                 <a href="#">Войти</a>
                 <a href="#">Регистрация</a>
             </nav>
             <div class="header-main">
-                <a href="/" class="logo"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+                <a href="{% url 'index' %}" class="logo"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
                 <form action="#">
                     <input type="text" placeholder="Введите название книги или автора...">
                     <button type="submit"><img src="{% static 'img/Shape.svg' %}" alt="snape"></button>
