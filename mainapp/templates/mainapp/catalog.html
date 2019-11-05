@@ -1,10 +1,11 @@
 {% extends 'mainapp/base.html' %}
 
-{% block top-menu %}
-    <div class="top-menu">
-        <a href="#">Новинки</a>
-        <a href="#">Акции</a>
-        <a href="#">Скидки</a>
-        <a href="#">Книжные циклы</a>
-    </div>
+{% block header %}
+    {{ block.super}}
+    {% include 'mainapp/includes/inc__top-menu.html' %}
+{% endblock %}
+
+{% block container %}
+    {% include 'mainapp/includes/inc__left-menu.html' %}
+    {% include 'mainapp/includes/inc__content-1.html' %}
 {% endblock %}

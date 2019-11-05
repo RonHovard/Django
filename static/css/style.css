@@ -100,7 +100,7 @@ form > button {
 .banner {
     width: 714px;
     height: 304px;
-    background-image: url(/static/img/banners/Banner.png);
+    background-image: url(/static/img/banners/banner_1.jpg);
     display: flex;
     justify-content: space-between;
     align-items: center;
