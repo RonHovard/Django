@@ -9,12 +9,16 @@
             учебников, открыток по адекватным ценам. Наш интернет-магазин - это всегда огромный ассортимент, быстрая
             доставка и низкие цены.</p><br>
         <img src="{% static 'img/map.PNG' %}" alt="map">
-        {% for contact in contacts %}
-            <div class="contact">
-                <p><b>Адрес: </b>{{ contact.address }}</p>
-                <p><b>Телефон: </b>{{ contact.phone }}</p>
-                <p><b>EMAIL: </b>{{ contact.email }}</p>
-            </div>
-        {% endfor %}
+        {% if contacts %}
+            {% for contact in contacts %}
+                <div class="contact">
+                    <p><b>Адрес: </b>{{ contact.address }}</p>
+                    <p><b>Телефон: </b>{{ contact.phone }}</p>
+                    <p><b>EMAIL: </b>{{ contact.email }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h3>Идёт загрузка данных...</h3>
+        {% endif %}
     </div>
 {% endblock %}
