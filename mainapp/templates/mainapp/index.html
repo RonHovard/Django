@@ -1,14 +1,15 @@
 {% extends 'mainapp/base.html' %}
+{% load static %}
 
 {% block top %}
     <div class="top">
         <div class="banner">
-            <a href="#"><img src="/static/img/arrow_211.svg" alt="arrow"></a>
-            <a href="#"><img src="/static/img/arrow_211_copy.svg" alt="arrow-copy"></a>
+            <a href="#"><img src="{% static 'img/arrow_211.svg' %}" alt="arrow"></a>
+            <a href="#"><img src="{% static 'img/arrow_211_copy.svg' %}" alt="arrow-copy"></a>
         </div>
         <div class="best-book">
             <h2>Лучшая книга месяца</h2>
-            <a href="#"><img src="/static/img/books/self-development/key_for.jpg"
+            <a href="#"><img src="{% static 'img/books/self-development/key_for.jpg' %}"
                                                          class="cover_min" alt="key-for"></a>
         </div>
     </div>

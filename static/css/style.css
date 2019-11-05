@@ -100,7 +100,7 @@ form > button {
 .banner {
     width: 714px;
     height: 304px;
-    background-image: url(/static/img/banners/banner_1.jpg);
+    background-image: url(/mediafiles/img/banners/banner_1.jpg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,7 +122,7 @@ form > button {
 .best-book {
     width: 269px;
     height: 305px;
-    background-image: url(/static/img/Layer_16.png);
+    background-image: url(/mediafiles/img/Layer_16.png);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -226,7 +226,7 @@ font {
 footer {
     width: 1280px;
     margin: 0 auto;
-    background-image: url(/static/img/back-footer.png);
+    background-image: url(/mediafiles/img/back-footer.png);
     background-color: #444345;
 }
 
