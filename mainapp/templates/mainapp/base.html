@@ -4,9 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    {% block title %}
-        <title>Магазин</title>
-    {% endblock %}
+    <title>{{ page_title|title }}</title>
     {% block css %}
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
