@@ -18,9 +18,15 @@
     <header>
         {% block header %}
             <nav>
-                <a href="{% url 'main:index' %}">Главная</a>
-                <a href="{% url 'main:catalog' %}">Каталог</a>
-                <a href="{% url 'main:contacts' %}">Контакты</a>
+                <a href="{% url 'main:index' %}"
+                   {% if request.resolver_match.url_name == 'index' %} class="active" {% endif %}>Главная
+                </a>
+                <a href="{% url 'main:catalog' %}"
+                   {% if request.resolver_match.url_name == 'catalog' %} class="active" {% endif %}>Каталог
+                </a>
+                <a href="{% url 'main:contacts' %}"
+                   {% if request.resolver_match.url_name == 'contacts' %} class="active" {% endif %}>Контакты
+                </a>
                 <a href="#">Войти</a>
                 <a href="#">Регистрация</a>
             </nav>

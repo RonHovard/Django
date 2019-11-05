@@ -32,6 +32,10 @@ nav {
     align-items: center;
 }
 
+.active {
+    color: red;
+}
+
 nav > a {
     color: #ffffff;
     font-size: 16px;
