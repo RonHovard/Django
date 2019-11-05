@@ -1,147 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'mainapp/base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Главная</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/fonts/font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam:100,300,400,500,700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <a href="/">Главная</a>
-            <a href="/catalog">Каталог</a>
-            <a href="/contacts">Контакты</a>
-            <a href="#">Войти</a>
-            <a href="#">Регистрация</a>
-        </nav>
-        <div class="header-main">
-            <a href="/" class="logo"><img src="/static/img/logo.png" alt="logo"></a>
-            <form action="#">
-                <input type="text" placeholder="Введите название книги или автора...">
-                <button type="submit"><img src="/static/img/Shape.svg" alt="snape"></button>
-            </form>
-            <div class="cart">
-                <p>Моя корзина</p>
-                <a href="#"><img src="/static/img/cart.svg" alt="cart"></a>
-            </div>
-        </div>
-    </header>
+{% block top %}
     <div class="top">
         <div class="banner">
-            <a href="#"><img src="/static/img/arrow_211.svg" alt="arrow"></a>
-            <a href="#"><img src="/static/img/arrow_211_copy.svg" alt="arrow-copy"></a>
+            <a href="#"><img src="{% static 'img/arrow_211.svg' %}" alt="arrow"></a>
+            <a href="#"><img src="{% static 'img/arrow_211_copy.svg' %}" alt="arrow-copy"></a>
         </div>
         <div class="best-book">
             <h2>Лучшая книга месяца</h2>
-            <a href="self-development_key-for.html"><img src="/static/img/books/self-development/key_for.jpg" class="cover_min" alt="key-for"></a>
+            <a href="#"><img src="{% static 'img/books/self-development/key_for.jpg' %}"
+                                                         class="cover_min" alt="key-for"></a>
         </div>
     </div>
-    <div class="container">
-        <div class="left-menu">
-            <h3>Категории</h3>
-            <ul class="menu">
-                <li><a href="#">Художественные</a></li>
-                <li><a href="#">Саморазвитие</a></li>
-                <li><a href="#">Детские</a></li>
-                <li><a href="#">Образование</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="book">
-                <a href="art_100_let.html"><img src="/static/img/books/art/100_let.jpg" class="cover_min" alt="100_let"></a>
-                <p class="name">Сто&nbsp;лет одиночества.
-                    Габриэль Гарсия Маркес.</p>
-                <font>500 рублей</font>
-            </div>
-            <div class="book">
-                <a href="children_focus.html"><img src="/static/img/books/children/focus.jpg" class="cover_min" alt="focus"></a>
-                <p class="name">Фокусы&nbsp;и&nbsp;игры. Яков&nbsp;Перельман</p>
-                <font>350 рублей</font>
-            </div>
-            <div class="book">
-                <a href="education_inform.html"><img src="/static/img/books/education/inform.jpg" class="cover_min" alt="inform"></a>
-                <p class="name">Информатика. Д.А.&nbsp;Локтев, Д.А.&nbsp;Видьманов.</p>
-                <font>470 рублей</font>
-            </div>
-            <div class="book">
-                <a href="self-development_key-for.html"><img src="/static/img/books/self-development/key_for.jpg" class="cover_min" alt="key-for"></a>
-                <p class="name">Ключи к успеху. Джим Рон.</p>
-                <font>559 рублей</font>
-            </div>
-            <div class="book">
-                <a href="art_sleepy_hollow.html"><img src="/static/img/books/art/sleepy_hollow.jpg" alt="sleepy_hollow" class="cover_min"></a>
-                <p class="name">Сонная лощина. В.Ирвинг.</p>
-                <font>500 рублей</font>
-            </div>
-            <div class="book">
-                <a href="art_martin.html"><img src="/static/img/books/art/martin.jpg" alt="martin" class="cover_min"></a>
-                <p class="name">Мартин Иден. Д.Лондон.</p>
-                <font>230 рублей</font>
-            </div>
-            <div class="book">
-                <a href="self-development_voices.html"><img src="/static/img/books/self-development/voices.jpg" alt="voices" class="cover_min"></a>
-                <p class="name">Зримые голоса. Оливер Сакс.</p>
-                <font>375 рублей</font>
-            </div>
-            <div class="book">
-                <a href="self-development_ask.html"><img src="/static/img/books/self-development/ask.jpg" alt="ask" class="cover_min"></a>
-                <p class="name">Просите - и получите. Пьер&nbsp;Моранси.</p>
-                <font>310 рублей</font>
-            </div>
-            <div class="book">
-                <a href="children_sadfunny.html"><img src="/static/img/books/children/funny.png" alt="funny" class="cover_min"></a>
-                <p class="name">Грустный и Весёлый.</p>
-                <font>210 рублей</font>
-            </div>
-            <div class="book">
-                <a href="children_nosov.html"><img src="/static/img/books/children/nosov.png" alt="nosov" class="cover_min"></a>
-                <p class="name">Незнайка на Луне. Н.Носов.</p>
-                <font>220 рублей</font>
-            </div>
-            <div class="book">
-                <a href="education_pedagogy.html"><img src="/static/img/books/education/pedagogy.jpg" alt="pedagogy" class="cover_min"></a>
-                <p class="name">Общая педагогика. В. Смирнов.</p>
-                <font>140 рублей</font>
-            </div>
-            <div class="book">
-                <a href="education_commerce.html"><img src="/static/img/books/education/commerce.jpg" alt="commerce" class="cover_min"></a>
-                <p class="name">Основы коммерции Г. Яковлев.</p>
-                <font>830 рублей</font>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-up">
-            <div class="footer-up_1">
-                <a href="#">Доставка</a>
-                <a href="#">Оплата</a>
-                <a href="#">Часто задаваемые вопросы</a>
-            </div>
-            <div class="footer-up_2">
-                <a href="#">Скидки</a>
-                <a href="#">Бонусы</a>
-                <a href="#">Карта сайта</a>
-            </div>
-            <div class="footer-up_3">
-                <h3 style="color: #fff">&#9993; Подписка на новости</h3>
-                <p>Будьте в курсе наших акций:</p>
-                <form action="">
-                    <input type="text" placeholder="Введите ваш EMAIL...">
-                    <button type="submit">&#10004;</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-down">
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-            <a href="#" id="last"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-            <img class="pay" src="/static/img/MasterCard.png" alt="mastercard">
-            <img class="pay" src="/static/img/Visa.png" alt="visa">
-        </div>
-    </footer>
-</body></html>
+{% endblock %}
+
+{% block container %}
+    {% include 'mainapp/includes/inc__left-menu.html' %}
+    {% include 'mainapp/includes/inc__content-1.html' %}
+{% endblock %}
+
