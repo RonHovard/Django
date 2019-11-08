@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ page_title|default:'магазин'|title }}</title>
+    <title>{{ page_title|default:'магазин'|upper }}</title>
     {% block css %}
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
@@ -13,7 +13,6 @@
     {% block js %}
     {% endblock %}
 </head>
-
 <body>
     <header>
         {% block header %}
@@ -76,6 +75,7 @@
         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
         <a href="#" id="last"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+        {% now "d.m.Y" %}
         <img class="pay" src="{% static 'img/MasterCard.png' %}" alt="mastercard">
         <img class="pay" src="{% static 'img/Visa.png' %}" alt="visa">
     </div>
