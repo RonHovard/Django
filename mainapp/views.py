@@ -1,16 +1,25 @@
 from django.shortcuts import render
+from mainapp.models import ProductCategory, Product
 
 
 def index(request):
+    categories = ProductCategory.objects.all()
+    products = Product.objects.all()
     context = {
         'page_title': 'главная',
+        'categories_menu': categories,
+        'products': products,
     }
     return render(request, 'mainapp/index.html', context)
 
 
 def catalog(request):
+    categories = ProductCategory.objects.all()
+    products = Product.objects.all()
     context = {
         'page_title': 'каталог',
+        'categories_menu': categories,
+        'products': products,
     }
     return render(request, 'mainapp/catalog.html', context)
 

@@ -1,18 +1,12 @@
 <div class="left-menu">
     <h3>Категории</h3>
     <ul class="menu">
-        <li><a href="#">Художественные</a></li>
-        <li><a href="#">Психология</a></li>
-        <li><a href="#">Детские</a></li>
-        <li><a href="#">Образование</a></li>
-        <li><a href="#">Искусство</a></li>
-        <li><a href="#">Наука и техника</a></li>
-        <li><a href="#">Деловая литература</a></li>
-        <li><a href="#">Увлечения</a></li>
-        <li><a href="#">Красота.Здоровье</a></li>
-        <li><a href="#">История</a></li>
-        <li><a href="#">Философия</a></li>
-        <li><a href="#">Общество</a></li>
-        <li><a href="#">Открытки</a></li>
+        {% for category in categories_menu %}
+            <li>
+                <a href="#">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 </div>
