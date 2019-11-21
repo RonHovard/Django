@@ -54,7 +54,7 @@ nav > a {
     padding-right: 140px;
 }
 
-form {
+.search {
     width: 380px;
     height: 44px;
     background-color: #79b260;
@@ -63,12 +63,12 @@ form {
     align-items: center;
 }
 
-form > input {
+.search > input {
     width: 330px;
     height: 30px;
 }
 
-form > button {
+.search > button {
     width: 30px;
     height: 30px;
     background-color: #79b260;
@@ -138,7 +138,7 @@ form > button {
     width: 1000px;
     margin: 20px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .left-menu {
@@ -328,3 +328,17 @@ i.fa:active {
     text-align: center;
     margin-top: 20px;
 }
+
+.authentication {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form > input[type="submit"] {
+    width: 70px;
+    height 30px;
+}
+
+
+

@@ -1,10 +1,12 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>{{ page_title|default:'магазин'|upper }}</title>
+    <title>
+        {{ page_title|default:'магазин'|upper }}
+    </title>
     {% block css %}
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
@@ -43,12 +45,9 @@
         {% endblock %}
     </header>
 
-    {% block top %}
+    {% block container %}
     {% endblock %}
-    <div class="container">
-        {% block container %}
-        {% endblock %}
-    </div>
+
 <footer>
     <div class="footer-up">
         <div class="footer-up_1">

@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from authapp.forms import ShopUserLoginForm
 
-# Create your views here.
+
+def user_login(request):
+    form = ShopUserLoginForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'authapp/login.html', context)
