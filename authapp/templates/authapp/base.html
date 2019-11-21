@@ -20,15 +20,28 @@
         {% block header %}
             <nav>
                 <a href="{% url 'main:index' %}"
-                   {% if request.resolver_match.url_name == 'index' %} class="active" {% endif %}>Главная
+                   class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">
+                    Главная
                 </a>
                 <a href="{% url 'main:catalog' %}"
-                   {% if request.resolver_match.url_name == 'catalog' %} class="active" {% endif %}>Каталог
+                   class="{% if request.resolver_match.url_name == 'catalog' %}active{% endif %}">
+                    Каталог
                 </a>
                 <a href="{% url 'main:contacts' %}"
-                   {% if request.resolver_match.url_name == 'contacts' %} class="active" {% endif %}>Контакты
+                   class="{% if request.resolver_match.url_name == 'contacts' %}active{% endif %}">
+                    Контакты
                 </a>
-                <a href="#">Войти</a>
+                {% if user.is_authenticated %}
+                    <a href="#"
+                        class="{% if request.resolver_match.url_name == 'user_login' %}active{% endif %}">
+                            {{user}}
+                    </a>
+                {% else %}
+                    <a href="{% url 'auth:user_login' %}"
+                        class="{% if request.resolver_match.url_name == 'user_login' %}active{% endif %}">
+                            Вход
+                    </a>
+                {% endif %}
                 <a href="#">Регистрация</a>
             </nav>
             <div class="header-main">
