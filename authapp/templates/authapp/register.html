@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block container %}
+    <h2 class="form_name">Регистрация:</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input class='button' type="submit" value="Зарегистрироваться">
+    </form>
+{% endblock %}

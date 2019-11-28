@@ -2,12 +2,11 @@
 {% load static %}
 
 {% block container %}
-        <h2>Войти в систему:</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <br>
-            <input type="submit" value="войти">
-        </form>
+    <h2 class="form_name">Войти в систему:</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class='button' type="submit" value="войти">
+    </form>
 {% endblock %}
 

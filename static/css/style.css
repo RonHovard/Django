@@ -329,15 +329,20 @@ i.fa:active {
     margin-top: 20px;
 }
 
-.authentication {
+.form_name {
+    margin-right: 20px;
+}
+
+.user_form {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+    width: 250px;
 }
 
-form > input[type="submit"] {
-    width: 70px;
-    height 30px;
+.button {
+    width: 160px;
+    height: 25px;
 }
 
 
