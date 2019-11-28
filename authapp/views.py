@@ -1,6 +1,6 @@
 from django.contrib import auth
 from django.urls import reverse
-from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm
+from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserUpdateForm
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
@@ -45,4 +45,20 @@ def user_register(request):
         'form': form,
     }
     return render(request, 'authapp/register.html', context)
+
+
+def user_update(request):
+    if request.method == 'POST':
+        form = ShopUserUpdateForm(request.POST, request.FILES, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('auth:user_update'))
+    else:
+        form = ShopUserUpdateForm(instance=request.user)
+
+    context = {
+        'page_title': 'Данные пользователя',
+        'form': form,
+    }
+    return render(request, 'authapp/update.html', context)
 

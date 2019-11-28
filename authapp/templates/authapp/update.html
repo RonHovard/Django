@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block container %}
+    <div>
+        <h2 class="form_name">Изменение личных данных пользователя:</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input class='button' type="submit" value="Сохранить">
+        </form>
+    </div>
+    <div class="user_avatar">
+        <img src="/media/{{ user.avatar }}" alt="image">
+    </div>
+{% endblock %}
