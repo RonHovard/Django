@@ -1,8 +1,7 @@
-{% extends 'authapp/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block container %}
-    <div class="container">
         <h2>Войти в систему:</h2>
         <form method="post">
             {% csrf_token %}
@@ -10,6 +9,5 @@
             <br>
             <input type="submit" value="войти">
         </form>
-    </div>
 {% endblock %}
 
