@@ -3,7 +3,7 @@
 <div class="content">
     {% for product in products %}
         <div class="book">
-            <a href="#"><img src="/media/{{ product.image }}" class="cover_min" alt="100_let"></a>
+            <a href="{% url 'main:product' product.pk %}"><img src="/media/{{ product.image }}" class="cover_min" alt="image"></a>
             <p class="name">{{product.name}}</p>
             <p class="name">{{product.author}}</p>
             <font>{{product.price}} &#8381;</font>

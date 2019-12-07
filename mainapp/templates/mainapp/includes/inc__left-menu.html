@@ -1,10 +1,21 @@
 <div class="left-menu">
     <h3>Категории</h3>
     <ul class="menu">
+        <li>
+                <a href="{% url 'main:category' 0 %}"
+                    class="{% if request.resolver_match.kwargs.pk == 0 %}
+                        active-green
+                    {% endif %}">
+                    Все
+                </a>
+        </li>
         {% for category in categories_menu %}
             <li>
-                <a href="#">
-                    {{ category.name }}
+                <a href="{% url 'main:category' category.pk %}"
+                    class="{% if request.resolver_match.kwargs.pk == category.pk %}
+                        active-green
+                    {% endif %}">
+                    {{category.name}}
                 </a>
             </li>
         {% endfor %}

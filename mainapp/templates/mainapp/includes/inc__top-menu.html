@@ -1,6 +1,16 @@
 <div class="top-menu">
-        <a href="#">Новинки</a>
-        <a href="#">Акции</a>
-        <a href="#">Скидки</a>
-        <a href="#">Книжные циклы</a>
+                <a href="{% url 'main:category' 0 %}"
+                    class="{% if request.resolver_match.kwargs.pk == 0 %}
+                        active-green
+                    {% endif %}">
+                    Все
+                </a>
+        {% for category in categories_menu %}
+                <a href="{% url 'main:category' category.pk %}"
+                    class="{% if request.resolver_match.kwargs.pk == category.pk %}
+                        active-green
+                    {% endif %}">
+                    {{category.name}}
+                </a>
+        {% endfor %}
 </div>

@@ -32,10 +32,6 @@ nav {
     align-items: center;
 }
 
-.active {
-    color: red;
-}
-
 nav > a {
     color: #ffffff;
     font-size: 16px;
@@ -159,6 +155,14 @@ h3 {
     border-bottom: 1px solid #eee;
     list-style-type: none;
     margin-bottom: 3px;
+}
+
+.active {
+    color: red;
+}
+
+.active-green {
+    border-bottom: 2px solid #555454;
 }
 
 .menu li a {
@@ -289,15 +293,18 @@ i.fa:active {
     color: #e45a5a;
 }
 
-.content > button {
+.content > a {
     color: #fff;
-    font-size: 20px;
+    font-size: 19px;
     background-color: #80bd66;
-    height: 46px;
+    height: 40px;
+    width: 180px;
     border-radius: 5px;
+    border: 1px solid #524747;
+    text-align: center;
 }
 
-.content > button:hover {
+.content > a:hover {
     box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
 }
 
